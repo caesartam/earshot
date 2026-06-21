@@ -100,3 +100,131 @@ body {
     color: var(--muted);
     font-style: italic;
 }
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.controls-bottom {
+    margin-top: 24px;
+    margin-bottom: 0;
+}
+
+.btn {
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: transform 0.08s ease, background 0.15s ease;
+    border: 1px solid var(--line-strong);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed
+}
+
+.btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--ink);
+}
+
+.btn-secondary:hover {
+    background: var(--paper-raised);
+}
+
+.answer-track {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    min-height: 40px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.answer-pip {
+    min-width: 44px;
+    height: 36px;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 13px;
+    background: var(--paper-raised);
+}
+
+.answer-pip.empty {
+    color: var(--muted);
+    border-style: dashed;
+    border-color: var(--line);
+    background: transparent;
+}
+
+.answer-pip.filled {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.piano {
+    position: relative;
+    height: 180px;
+    display: flex;
+    background: var(--paper-raised);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    padding: 4px;
+    gap: 3px;
+}
+
+.key {
+    flex: 1;
+    border: 1px solid var(--line);
+    border-radius: 0 0 4px 4px;
+    background: var(--paper-raised);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 12px;
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.08s ease, color 0.08s ease;
+}
+
+.key:hover {
+    background: var(--accent-soft);
+}
+
+.key.flash {
+    background: var(--accent);
+    color: var(--paper);
+}
+
+.key.correct-flash {
+    background: var(--correct);
+    color: var(--paper);
+}
