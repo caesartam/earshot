@@ -1,0 +1,102 @@
+:root {
+    --ink: #1c1b19;
+    --paper: #f7f4ec;
+    --paper-raised: #ffffff;
+    --line: #d8d2c2;
+    --line-strong: #1c1b19;
+    --accent: #c0392b;
+    --accent-soft: #f3dbd6;
+    --correct: #2f6b4f;
+    --correct-soft: #dcebe2;
+    --muted: #6f6a5d;
+    --radius: 6px;
+    --serif: 'Georgia', 'Iowan Old Style', serif;
+    --mono: 'SF Mono', 'Menlo', monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   background: var(--paper);
+   color: var(--ink);
+   font-family: var(--serif);
+}
+
+.wrap {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+    font-style: italic;
+}
+
+.tagline {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--paper-raised);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius);
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+    padding: 12px 14px;
+    border-right: 1px solid var(--line);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.status-bar {
+    text-align: center;
+    min-height: 24px;
+    margin-bottom: 20px;
+}
+
+#status {
+    margin: 0;
+    font-size: 15px;
+    color: var(--muted);
+    font-style: italic;
+}
